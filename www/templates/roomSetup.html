@@ -1,0 +1,30 @@
+<ion-view title="Setup New Room">
+    <ion-content has-header="true">
+        <form id="roomSet-form" ng-submit="createRoom()">
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <span class="input-label"><i class="icon ion-home ico"></i></span><input placeholder="Name of Room" type="text" ng-model = "roomData.name">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label"><i class="icon ion-location ico"></i></span><input placeholder="Address" type="text" ng-model = "roomData.address">
+                </label>
+                <label class="item item-input">
+                    
+                    <textarea placeholder="Description" ng-model = "roomData.desc">
+                        </textarea>
+                </label>
+                <label class="item">
+                    <span class="addMates row">
+                        <input class="col col-90" type="text" ng-model="temp" placeholder="Add a Roommate...">
+                        <button class="button button-icon" type="submit" ng-click="addField(temp)"><i class="ico ion-plus"></i></button>
+                    </span>
+                </label>
+                <label class="item item-input" ng-if="inputs">
+                    <div ng-repeat="pData in inputs">"{{pData.names}}"</div>
+                </label>
+                <button class="button button-block button-balanced" type="submit" ng-click="addARoom()">Set Up Room</button>
+                <button class="button button-clear button-block button-assertive" ng-click="cancelRoomSetup()">Cancel</button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

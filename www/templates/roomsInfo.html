@@ -1,0 +1,38 @@
+<ion-view title="Manoj Parihar">
+    <ion-nav-bar class="bar-assertive">
+        <ion-nav-back-button>
+        </ion-nav-back-button> 
+        <ion-nav-buttons side="left">
+            <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+<!--
+    <div class="bar bar-subheader bar-assertive-light">
+        <h2 class="title scoreFinal">Overall Room Score: 92</h2>
+    </div>
+-->
+    <ion-content has-header="true" has-subheader="true">
+        <div class="overallScore back-assertive" >
+            <h3>Overall Room Score: 92</h3>
+        </div>
+        <div class="belowScore" ng-if="rooms.length <= 1">
+            You are currently not added to any room.
+            Click <button class="button ion-home  button-assertive" ng-click="addRoom()" style="border-radius:50%">        </button> to add yourself to a room.
+        </div>
+        <ion-list ng-if="rooms.length > 1">
+            <ion-item ng-repeat="playlist in rooms" ng-href="#/app/playlists/{{playlist.name}}" on-swipe-left="">
+                <span class="row">
+            <span class="col col-90">{{playlist.title}}</span>
+                <span class="col notif">5</span></span>
+                <ion-option-button class="button-assertive" ng-click="deleteRoom(playlist.id)">
+                    Delete
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+        
+        <button class="button ion-home addRoomButton button-assertive" ng-click="addRoom()">
+            
+        </button>
+    </ion-content>
+</ion-view>

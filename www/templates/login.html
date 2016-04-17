@@ -1,0 +1,43 @@
+<ion-modal-view hide-nav-bar="true" style="background: url(../img/1.jpg) no-repeat center fixed;">
+    <div style="height:100%; width:100%; background-color: rgba(34, 63, 128, 0.7);"></div>
+<!--
+    <ion-header-bar>
+        <h1 class="title">Login</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeLogin()">Close</button>
+        </div>
+    </ion-header-bar>
+-->
+    <ion-content class="padding">
+        <h1 class="title titleLogin">Room Score</h1>
+        <form ng-submit="login.signin()">
+            <div class="list">
+                <label class="item item-input login-input login-item"><span class="login-label"><i class="ion-ios-people"></i></span>
+                    <input class="inp" id="email" name="email" type="email" placeholder="Your email" ng-model="login.email">
+                </label>
+                <label class="item login-item item-input login-input">
+                    <span class="login-label"><i class="ion-key"></i></span>
+                    <input class="inp" id="password" name="password" type="password" placeholder="Your password" ng-model="login.password">
+                </label>
+            </div>
+            <div class="item login-item">
+                <button class="pg1b button button-block button-balanced" type="submit">
+                    Log In
+                </button>
+            </div>
+            <div class="item login-item">
+                <button class="button button-block button-stable" type="button" ng-click="login.sUp()">
+                    Get Started
+                </button>
+            </div>
+            <div class="login-item">
+                    <button class="button button-positive icon-left ion-social-facebook" ng-click="login.socialSignin('facebook')" type="button">
+                        Facebook
+                    </button>
+                    <button style="float:right" class="button button-assertive icon-left ion-social-googleplus" ng-click="login.socialSignin('google')" type="button">
+                        Google+
+                    </button>
+                </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

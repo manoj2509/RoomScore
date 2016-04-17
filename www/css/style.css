@@ -1,21 +1,154 @@
 /* Empty. Add your own CSS if you like */
-.icon.new-item {
-	position: absolute;
-	right: 20px;
-	font-size: 20px;
-	bottom: 13px;
+body {
+    font-family: Roboto;
 }
-.cancel-create {
-	position: absolute;
-	right: 20px;
-	font-size: 14px;
-	bottom: 13px;
-	color:#ef4e3a;
+.button {
+    min-height: 52px;
 }
-[ng-click], [data-ng-click], [x-ng-click] {
-    cursor: pointer;
+.titleLogin {
+    text-align: center;
+    color: white;
+    font-family: Timber;
+    font-size: 4em;
+    height: 35%;
+    padding-top: 10%;
 }
-/* Ionic Overwrite! */
-.item-icon-left .icon, .item-icon-right .icon {
-	font-size: 22px;
+.login-label {
+    width: 15%;
+}
+.ion-home {
+    font-size: 25px;
+}
+.login-item {
+    background-color: transparent;
+    border: none;
+    width: 70%;
+    margin-left: 15%;
+}
+.login-form input[type="text"], .login-form input[type="password"] {
+    color:white;
+}
+.login-input input[type="text"], .login-input input[type="password"] {
+    color: white;
+}
+form {
+    width: 100%;
+}
+i {
+    width: 50px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+.login-input {
+    width: 75%;
+    margin-left: 12.5%;
+    margin-bottom: 1%;
+    border-bottom: 1px solid white;
+/*    background-color: rgba(0, 0, 0, 0.3);*/
+}
+.soc-button {   
+    bottom: 5px;
+    float: left;
+    width: 45%;
+    margin-left: 3%;
+}
+.fb {
+    background-color: #3D5A98;
+}
+.gp {
+    background-color: #DC4A38;
+}
+login-form .item:nth-child(1), login-form .item:nth-child(2) {
+    border-bottom: 1px solid white;
+}
+.sideMenuTitle {
+    height: 15%;
+}
+.back-assertive {
+    background-color:crimson;
+}
+.bar.bar-assertive {
+    border: none;
+}
+.scoreFinal {
+    color: white;
+    height: 80px;
+    line-height: 80px;
+}
+.item-complex .item-content {
+    padding: 26px 9px 26px 26px;
+}
+.notif {
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+.scroll {
+    height: 100%;
+}
+.overallScore {
+    min-height: 7%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.overallScore h3 {
+    width: inherit;
+    text-align: center;
+    color:white;
+    padding-top: 2%;
+    margin-bottom: 0;
+    margin-top: 0;
+    
+}
+.belowScore {
+    top: 40%;
+    position: absolute;
+    font-size: 20px;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+}
+.addRoomButton {
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    bottom: 4%;
+    right: 7%;
+}
+.input-label {
+    text-align: center;
+}
+.ico {
+    color:#33CD5F;
+}
+#roomSet-form {
+    width: 80%;
+    height: inherit;
+    margin-left: 10%;
+    margin-top: 12%;
+}
+#roomSet-form .item.item-input {
+    color: black;
+}
+#roomSet-form textarea {
+    min-height: 150px;
+    margin-top: 5%;
+}
+#roomSet-form div {
+    height: 95%;
+}
+.addMates, .addMates button, .addMates input[type="text"] {
+    height: inherit;
+}
+.moreRoommates {
+    padding: none;
+}
+.ion-plus {
+    padding-top: 5px;
+}
+.moreRoommates .button.button-block {
+    margin: 0;
 }

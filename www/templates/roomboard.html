@@ -1,0 +1,26 @@
+<ion-view title = "Dashboard">
+    <ion-content has-header="true" ng-init="check($event)">
+        <div class="overallScore back-assertive" >
+            <h3>Overall Room Score: 92</h3>
+        </div>
+        <div ng-if="!rooms">
+            <div class="belowScore" ng-if="rooms.length <= 1">
+                You are currently not added to any room.
+                Click <button class="button ion-home  button-assertive" ng-click="addRoom()" style="border-radius:50%">        </button> to add yourself to a room.
+                <p>Instead Search for a Room</p>
+            </div>
+        </div>
+        <div ng-if="rooms">
+            <div class="card" ng-repeat="item in rooms">
+                <div class="item item-divider">{{item.name}}
+                </div>
+                <div class="item item-text-wrap">
+                    ABC
+                </div>
+            </div>
+            
+        </div>
+        <button class="button ion-home addRoomButton button-assertive" ng-click="addRoom()">
+        </button>
+    </ion-content>
+</ion-view>

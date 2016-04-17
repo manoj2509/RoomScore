@@ -10,40 +10,40 @@ angular.module('SimpleRESTIonic.services', [])
             return $q.reject(response);
         };
     })
-
-    .service('ItemsModel', function ($http, Backand) {
-        var service = this,
-            baseUrl = '/1/objects/',
-            objectName = 'items/';
-
-        function getUrl() {
-            return Backand.getApiUrl() + baseUrl + objectName;
-        }
-
-        function getUrlForId(id) {
-            return getUrl() + id;
-        }
-
-        service.all = function () {
-            return $http.get(getUrl());
-        };
-
-        service.fetch = function (id) {
-            return $http.get(getUrlForId(id));
-        };
-
-        service.create = function (object) {
-            return $http.post(getUrl(), object);
-        };
-
-        service.update = function (id, object) {
-            return $http.put(getUrlForId(id), object);
-        };
-
-        service.delete = function (id) {
-            return $http.delete(getUrlForId(id));
-        };
-    })
+//
+//    .service('ItemsModel', function ($http, Backand) {
+//        var service = this,
+//            baseUrl = '/1/objects/',
+//            objectName = 'users/';
+//
+//        function getUrl() {
+//            return Backand.getApiUrl() + baseUrl + objectName;
+//        }
+//
+//        function getUrlForId(id) {
+//            return getUrl() + id;
+//        }
+//
+//        service.all = function () {
+//            return $http.get(getUrl());
+//        };
+//
+//        service.fetch = function (id) {
+//            return $http.get(getUrlForId(id));
+//        };
+//
+//        service.create = function (object) {
+//            return $http.post(getUrl(), object);
+//        };
+//
+//        service.update = function (id, object) {
+//            return $http.put(getUrlForId(id), object);
+//        };
+//
+//        service.delete = function (id) {
+//            return $http.delete(getUrlForId(id));
+//        };
+//    })
 
     .service('LoginService', function (Backand) {
         var service = this;
@@ -75,12 +75,38 @@ angular.module('SimpleRESTIonic.services', [])
             return Backand.signup(firstName, lastName, email, password, confirmPassword);
         }
     })
-
+    .service('RetreiveRoomService', function($http, Backand) {
+        var baseUrl = Backand.getApiUrl() + '/1/objects/';
+        self.appName = 'broncohack';
+        
+        
+        getUser = function (email) {
+            var filter = [{"fieldName":"email","operator":"equals","value":email}];
+            console.log("In getUser" + email);
+            return $http({
+                method: 'GET',
+                url: Backand.getApiUrl() + '/1/objects/' + 'users/',
+                params: {
+                    filter: filter
+                }
+            });
+        }
+        getRoomList = function (id) {
+            return $http({
+                method: 'GET',
+                url: Backand.getApiUrl() + '/1/objects/' + 'users/' + id + '/room'
+            });
+        }
+    return {
+        getUser: getUser,
+        getRoomList: getRoomList
+    }
+    })
     .service('AuthService', function($http, Backand){
 
     var self = this;
     var baseUrl = Backand.getApiUrl() + '/1/objects/';
-    self.appName = '';//CONSTS.appName || '';
+    self.appName = 'broncohack';//CONSTS.appName || '';
     self.currentUser = {};
 
     loadUserDetails();
