@@ -257,6 +257,9 @@ angular.module('SimpleRESTIonic.controllers', ['SimpleRESTIonic.services'])
 .controller('shoppingListCtrl', function($scope) {
 
 })   
+.controller('settingsCtrl', function($scope) {
+
+})
 .controller('addListCtrl', function($scope) {
 
 }) 
