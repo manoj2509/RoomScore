@@ -1,28 +1,61 @@
-<ion-view title="Shopping List" id="page6">
+<ion-view title="Shopping List" style="color: white; font-family: 'roboto'" id="page6" >
+  <ion-nav-bar class="my-color"></ion-nav-bar>
+  <style>.my-color{
+    background-color:#385361 !important;
+  }</style>
+  <div class="spacer" style="width: 283px; height: 259px;"></div>
 
+  <ion-tabs class="tabs-positive tabs-icon-top bar-custom-heading">
 
-  <ion-content padding="true" class="has-header">
-
-      <ion-list>
-            <ion-item class="item-divider">Your Share</ion-item>
-            <ion-checkbox>Checkbox</ion-checkbox>
-            <ion-checkbox>Checkbox</ion-checkbox>
-        </ion-list>
-        <div class="spacer" style="width: 283px; height: 11px;"></div>
+    <ion-tab title="Your Share" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline">
+      <ion-content padding="true" class="has-header">
+        <div class="spacer" style="height: 100px;"></div>
         <ion-list>
-            <ion-item class="item-divider">Things to Buy</ion-item>
-            <ion-list>
-                <ion-item>Item 1</ion-item>
-                <ion-item>Item 2</ion-item>
-                <ion-item>Item 3</ion-item>
-            </ion-list>
-        </ion-list>
+          <ion-checkbox style="color: #0a9dc7">Milk</ion-checkbox>
+          <ion-checkbox style="color: #0a9dc7">Eggs</ion-checkbox>
         <div class="spacer" style="width: 283px; height: 11px;"></div>
-        <a ui-sref="menu.addList" id="shoppingList-button13" style="border-radius:55%;" class="button button-positive  icon ion-android-add"></a>
 
-      <div class="bar bar-footer bar-positive">
-        <div class="title">Footer</div>
+
+        <a ui-sref="menu.addList" id="shoppingList-button13" style="border-radius:100%; background-color: #5f8fa1; position: absolute; right: 0; bottom: 20%;" class="button button-positive  icon ion-android-add"></a>
+          <div class="spacer" style="height: 290px;"></div>
+
+        <div class="bar bar-footer bar-positive" style="background-color: #5f8fa1">
+          <div class="title" style="background-color: #5f8fa1">RoomScore: 97</div>
+        </div>
+
+      </ion-content>
+    </ion-tab>
+
+    <ion-tab title="Nearby" icon-on="ion-model-s" icon-off="ion-model-s">
+      <div class="spacer" style="width: 283px; height: 70px;"></div>
+      <ion-list>
+        <div class="spacer" style="width: 283px; height: 35px;"></div>
+        <ion-checkbox style="color: #0a9dc7">Salad</ion-checkbox>
+        <ion-checkbox style="color: #0a9dc7">Potatoes</ion-checkbox>
+        <ion-checkbox style="color: #0a9dc7">Onions</ion-checkbox>
+      </ion-list>
+      <div class="bar bar-footer bar-positive"  style="background-color: #5f8fa1">
+        <div class="title"  style="background-color: #5f8fa1">RoomScore: 97</div>
       </div>
+    </ion-tab>
 
-    </ion-content>
+    <ion-tab title="Full List" icon-on="ion-ios-paper-outline" icon-off="ion-ios-paper-outline">
+      <div class="spacer" style="width: 283px; height: 70px;"></div>
+      <ion-list>
+        <div class="spacer" style="width: 283px; height: 35px;"></div>
+        <ion-checkbox style="color: #0a9dc7">Milk</ion-checkbox>
+        <ion-checkbox style="color: #0a9dc7">Eggs</ion-checkbox>
+        <ion-checkbox style="color: #0a9dc7">Salad</ion-checkbox>
+        <ion-checkbox style="color: #0a9dc7">Potatoes</ion-checkbox>
+        <ion-checkbox style="color: #0a9dc7">Onions</ion-checkbox>
+      </ion-list>
+      <div class="bar bar-footer bar-positive"  style="background-color: #5f8fa1">
+        <div class="title"  style="background-color: #5f8fa1">RoomScore: 97</div>
+      </div>
+    </ion-tab>
+
+  </ion-tabs>
+
+
+
 </ion-view>
